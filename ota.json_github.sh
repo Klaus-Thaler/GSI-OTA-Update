@@ -19,7 +19,6 @@ wget $variant && unxz -v -k $(basename $variant)
 # flash with fastboot
 adb reboot fastboot
 sleep 10
-fastboot flash system vbmeta.img
 fastboot flash system $(basename ${variant%.*})
 
 exit
